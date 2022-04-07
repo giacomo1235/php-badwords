@@ -87,5 +87,11 @@ Suck it down
 Flush it down";
 
 echo $text;
+echo (strlen($text));
+$replace = "***";
+echo $_GET["badword"];
+$text2 = str_replace($_GET["badword"] , $replace , $text);
 
-var_dump($text);
+echo $text2;
+echo (strlen($text2));
+?>
