@@ -89,8 +89,9 @@ Flush it down";
 echo $text;
 echo (strlen($text));
 $replace = "***";
+$malaparola = $_GET["badword"];
 echo $_GET["badword"];
-$text2 = str_replace($_GET["badword"] , $replace , $text);
+$text2 = str_replace($malaparola , $replace , $text);
 
 echo $text2;
 echo (strlen($text2));
