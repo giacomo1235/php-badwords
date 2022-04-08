@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 <?php
 $text = "Some say the end is near
 Some say we'll see Armageddon soon
@@ -86,13 +98,13 @@ Put it down
 Suck it down
 Flush it down";
 
-echo $text;
-echo (strlen($text));
+echo '<p>' . $text . '</p>';
+echo '<p>' . 'la lunghezza del testo è di ' . strlen($text) . ' lettere' . '</p>' ;
 $replace = "***";
 $malaparola = $_GET["badword"];
-echo $_GET["badword"];
-$text2 = str_replace($malaparola , $replace , $text);
+echo '<p>' . 'la parola scelta è:' . $_GET["badword"] . '</p>';
+$text2 = str_ireplace($malaparola , $replace , $text);
 
-echo $text2;
-echo (strlen($text2));
+echo '<p>' . $text2 . '</p>';
+echo '<p>' . 'la lunghezza del nuovo testo è di: ' . strlen($text2) . 'lettere' . '</p>';
 ?>
